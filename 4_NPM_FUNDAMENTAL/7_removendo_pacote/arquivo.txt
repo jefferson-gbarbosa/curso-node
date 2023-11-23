@@ -1,0 +1,2 @@
+COMANDO PARA REMOVER UM PACOTE:
+  npm uninstall <nome do pacote>

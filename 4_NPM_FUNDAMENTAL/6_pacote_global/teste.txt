@@ -1,0 +1,2 @@
+Para instalar um pacote de forma global utilizamos
+Ex: npm install -g lodash
