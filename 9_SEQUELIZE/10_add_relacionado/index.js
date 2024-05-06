@@ -70,8 +70,6 @@ app.post('/users/update', async(req, res) =>{
   const occupation = req.body.occupation
   let newsletter = req.body.newsletter
 
-
-
   if(newsletter === 'on'){
     newsletter = true
   }else{
@@ -96,18 +94,18 @@ app.get('/', async(req, res) =>{
   res.render('home', { users: users});
 });
 
-app.post('/address/create',async(req, res) =>{
-  const UserId = req.body.Userid
+app.post('/address/create', async(req, res) =>{
+  const UserId = req.body.UserId
   const street = req.body.street
   const number = req.body.number
   const city = req.body.city
 
 
   const address = {
-    UserId,
     street,
     number,
-    city
+    city,
+    UserId
   }
 
   await Address.create(address)
